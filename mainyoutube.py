@@ -14,7 +14,8 @@ print("STREAMS")
 for stream in youtube_video.streams.fmt_streams:
     print(" " , stream)
     
-stream = youtube_video.streams.get_by_itag(22)
+#stream = youtube_video.streams.get_by_itag(22)
+stream = youtube_video.streams.get_highest_resolution()
 print("téléchargement...")
 stream.download()
 print("OK")
